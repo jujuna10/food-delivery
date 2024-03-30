@@ -32,7 +32,6 @@
                 <div class="text">
                     <p>Hungry after a jog?</p>
                     <form>
-                        <img src="./assets/pin.png" alt="" width="20" height="20" id="mark">
                         <input type="text" name="addres" id="addres" placeholder="enter your addres">
                     </form>
 
@@ -78,21 +77,27 @@
                             <img src="./assets/Flag_of_Georgia.svg.png" alt="photo" width="20" height="20">
                             <span>Georgia</span>
                         </div>
-                        <div class="georgian-city">
+                        <div class="georgian-city" id="city">
+                            <input type="checkbox" id="ch">
+                            <input type="checkbox" id="more">
                             <span>Tbilsi <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
                             <span>Batumi <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
                             <span>Kutaisi <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
                             <span>Sachkere <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
-                            <span>Gori <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
-                            <span>Telavi <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
-                            <span>Axaltsikhe <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
-                            <span>Poti <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
-                            <span>Ozurgeti <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
-                            <span>Mestia <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
-                            <span>Signagi <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
-                            <span>Kaspi <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
-                        </div>
-                    </div>
+                            
+                            
+                            <span class="seemore">Gori <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
+                            <span class="seemore">Telavi <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
+                            <span class="seemore">Axaltsikhe <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
+                            <span class="seemore">Poti <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
+                            <span class="seemore">Ozurgeti <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
+                            <span class="seemore">Mestia <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
+                            <span class="seemore">Signagi <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
+                            <span class="seemore">Kaspi <img src="./assets/right-arrow.png" alt="photo" width="10" height="10"></span>
+                                
+                            <label for="more" id="seemore" onclick="labels()">see more</label>
+
+                            <label for="ch" id="showless">show less</label>
                 </div>
             </div>
             <div class="download">
@@ -133,7 +138,7 @@
                         <div class="links-title">
                             <a href="#">Partner with Wolt</a>
                         </div>
-                        <div class="one">
+                        <div class="linkss">
                             <a href="#">For couriers</a>
                             <a href="#">For merchants</a>
                             <a href="#">For affiliates</a>
@@ -145,7 +150,7 @@
                             <a href="#">Company</a>
                         </div>
                         
-                        <div class="two">
+                        <div class="linkss">
                             <a href="#">About us</a>
                             <a href="#">What we stand for</a>
                             <a href="#">Jobs</a>
@@ -161,7 +166,7 @@
                             <a href="#">Products</a>
                         </div>
 
-                        <div class="three">
+                        <div class="linkss">
                             <a href="#">Wolt Drive</a>
                             <a href="#">Wolt Market</a>
                             <a href="#">Wolt+</a>
@@ -176,7 +181,7 @@
                             <a href="#">Useful links</a>
                         </div>
 
-                        <div class="four">
+                        <div class="linkss">
                             <a href="#">Support</a>
                             <a href="#">Media</a>
                             <a href="#">Contact</a>
@@ -191,7 +196,7 @@
                             <a href="#">Follow us</a>
                         </div>
 
-                        <div class="five">
+                        <div class="linkss">
                             <a href="#">Blog</a>
                             <a href="#">Engineering Blog</a>
                             <a href="#">Instagram</a>
@@ -235,6 +240,23 @@
 
 
             </footer>
+            
         </main>
+        
+        <script>
+            function labels() {
+                let lesslabel = document.getElementById('showless');
+                let morelabel = document.getElementById('seemore');
+        
+                if (lesslabel.textContent === 'show less') {
+                    lesslabel.textContent = 'see more';
+                    morelabel.textContent = 'show less';
+                } 
+                else {
+                    lesslabel.textContent = 'show less';
+                    morelabel.textContent = 'see more';
+                }
+            }
+        </script>
     </body>
 </html>

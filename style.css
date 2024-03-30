@@ -13,7 +13,7 @@ body{
     flex-direction: column;
 }
 .navbar {
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -31,7 +31,6 @@ header{
     justify-content: center;
     align-items: center;
 }
-
 .navbar p {
     font-size: 35px;
     font-family: Lobster;
@@ -73,7 +72,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;
+    gap: 100px;
     background-color: rgb(235, 234, 240);
     padding-inline: 200px;
     padding: 100px;
@@ -83,9 +82,7 @@ input {
     flex-direction: column;
     gap: 20px;
 }
-#mark {
-    transform: translate(35px,5px);
-}
+
 
 input:hover {
     border: 2px solid blueviolet;
@@ -151,9 +148,16 @@ select {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-
+    position: relative;
 }
-
+label{
+    display: inline-block;
+    width: 80px;
+    background-color: rgb(235, 234, 240);
+    padding: 5px;
+    border-radius: 2px;
+    display: none;
+}
 .georgian-city span {
     padding: 20px;
     border: 1px solid gray;
@@ -165,6 +169,16 @@ select {
     justify-content: center;
     align-items: center;
     justify-content: space-between;
+}
+#ch:checked ~ .seemore{
+    display: none;
+}
+#more{
+    display: none;
+}
+#seemore{
+    display: none;
+
 }
 
 .cities span:hover {
@@ -307,3 +321,144 @@ footer a{
 .left div img{
     filter: invert();
 }
+@media (max-width:1020px) {
+    .georgian-city{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .bottom{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media (max-width:800px){
+    .navbar{
+        display: none;
+    }
+    .login{
+        gap: 20px;
+    }
+    .photoo img{
+        width: 200px;
+        height: 200px;
+    }
+    .introduction{
+        gap: 20px;
+        padding: 100px,0px,100px,0px;
+    }
+    .top{
+        gap: 20px;
+    }
+}
+@media (max-width:975px){
+    
+    .text p{
+        font-size: 35px;
+    }
+    .top{
+        gap: 50px;
+    }
+}
+#ch{
+    display: none;
+}
+
+@media (max-width:795px){
+    .georgian-city{
+        grid-template-columns: repeat(1,1fr);
+    }
+    label{
+        display: block;
+    }
+    #ch:checked ~ #showless{
+        display: none;
+    }
+    #ch:checked ~ #seemore{
+        display: block;
+    }
+    #more:checked ~ .seemore{
+        display: block;
+    }
+
+
+    
+    input{
+        width: 200px;
+    }
+    .text p{
+        font-size: 25px;
+    }
+    .location{
+        flex-direction: column;
+    }
+}
+@media (max-width:750px){
+    .top a{
+        font-size: 14px;
+    }
+    .top{
+        gap: 15px;
+    }
+    .phone img{
+        width: 250px;
+        height: 250px;
+    }
+    #title{
+        font-size: 25px;
+    }
+    #restaurants{
+        max-width: 250px;
+    }
+    .app{
+        margin-left: 50px;
+    }
+}
+@media (max-width:525px){
+    .bottom a{
+        font-size: 14px;
+    }
+    .phone img{
+        width: 150px;
+        height: 200px;
+    }
+    .left a{
+        font-size: 14px;
+    }
+    .left img{
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width:500px){
+    .linkss a{
+        display: none;
+    }
+    .top{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media (max-width:470px){
+    .phone{
+        display: none;
+    }
+    .cities{
+        flex-direction: column;
+    }
+    .text p{
+        font-size: 18px;
+    }
+    .photoo img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+
+
+
+
